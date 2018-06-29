@@ -6,7 +6,18 @@ import config from './config/environment';
 const App = Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
-  Resolver
+  Resolver,
+  // eslint-disable-next-line
+  engines: {
+    emberBlogEngine: {
+      dependencies: {
+        services: [
+          'blog-data',
+          {'session': 'active-session'}
+        ]
+      }
+    }
+  }
 });
 
 loadInitializers(App, config.modulePrefix);

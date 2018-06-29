@@ -1,0 +1,19 @@
+#install ember engines
+
+$ember install ember-engines
+
+# install blog engine from repo
+
+- add  "ember-blog-engine": "dgeb/ember-blog-engine", to devDependencies of package.json and yarn install
+
+# add emberBlogEngine to app/app.json, this start mapping the interface between your application and the engine
+
+# mount the routealbbe engine in the app/router.js   this.mount('ember-blog-engine', { as: 'blog' });
+
+# add the application side of services needed by the engine as outline in the app/app.json interfaces.  In case a active-session and blog-data service.  the blog-data service is just of huck of josn but it could be reading the store and retreving a model, filtered or not.
+
+
+# add a link to the routeable engine with a standard link-to
+
+
+

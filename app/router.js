@@ -12,6 +12,9 @@ Router.map(function() {
   this.route('rentals', function() {
     this.route('show', { path: '/:rental_id' });
   });
+
+  this.mount('ember-blog-engine', { as: 'blog' });
+
 });
 
 export default Router;
